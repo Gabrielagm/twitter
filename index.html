@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twiter</title>
+    <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>     
+    <div id="menu-nav">
+        <nav>
+            <ul>
+                <a href="#" class="nav-start">inicio</a>
+                <a href="#" class="nav-notifications">notificaciones</a>
+                <a href="#" class="nav-messages">mensajes</a>
+                <a href="#" class="nav-icono-twiter"></a>
+            </ul>
+            <ul>
+                <input type="text" class="nav-input">
+                <a href="#" class="nav-photo-user"></a>
+                <a href="#" class="nav-button">twittear</a>
+            </ul>
+        </nav>
+    </div>
+    <main id="boxTwiter">
+        <section class="boxTwiter-left">
+            <div class="boxTwiter-left-profile">
+                <div class="boxTwiter-left-profile-logo"></div>
+                <div class="boxTwiter-left-profile-info">
+                    <span>Gabriela</span>
+                    <br>
+                    <span>@23ggm</span>
+                </div>
+                <div class="boxTwiter-left-profile-count-tweet">
+                    <span>Tweets</span>
+                <!--    <span></span>-->
+                </div>
+            </div>
+        </section>
+        <section class="boxTwiter-center"><!--dentro de esta sección va el botón(evento-> "click")-->
+            <div class="icono-boxTwiter"></div>
+            <textarea name="textarea" class="input-boxTwiter" placeholder="¿Qué está pasando?"></textarea>
+        </section>
+        <section class="boxTwiter-right">
+        </section>
+        <section class="tweets-messages"></section>
+    </main>
+    <script src="js/app.js"></script>
+</body>
+</html>

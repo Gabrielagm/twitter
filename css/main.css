@@ -1,0 +1,246 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: "Segoe UI",Arial,sans-serif;
+    background-color:#e6ecf0;
+}
+
+#menu-nav{
+    width:100%;
+    height:50px;
+    border-top:1px solid #acb1b4;
+    border-bottom:1px solid #acb1b4;
+    background-color:#fff;
+}
+
+nav{
+    width:90%;
+    display:inline-block;
+    position:absolute;
+    left:5%;
+    padding:7px;
+}
+
+nav>ul{
+    display:inline-block;
+}
+nav>ul>a{
+    text-decoration:none;
+    color: #66757f;
+    font-weight:bold;
+}
+
+.nav-icono-twiter::after{
+    content: "\f099";
+    font-family: FontAwesome;
+    color: #1da1f2;
+    font-size: 20px;
+}
+
+.nav-start::before{
+    content: "\f005";
+    font-family: FontAwesome;
+}
+
+.nav-notifications:before{
+    content: "\f008";
+    font-family: FontAwesome;
+}
+
+.nav-messages::before{
+    content:"\f0e0";
+    font-family: FontAwesome;
+}
+
+.nav-input{
+    width:200px;
+    height:30px;
+    background-color:#f5f8fa;
+    border:1px solid #e6ecf0;
+    border-radius:20px;
+}
+.nav-photo-user::after{
+    content: "\f2bd";
+    font-family: FontAwesome;
+}
+
+.nav-button{   
+    text-align: center;
+    background-color: #4ab3f4;
+    border-radius:20px;
+    color: #fff;
+    width:80px;
+    padding:8px 10px;
+}
+
+nav ul:first-child a{
+   padding-left:20px;
+}
+
+nav ul:last-child{
+    float:right;  
+}
+
+nav ul:first-child a:last-child{
+   position:absolute;
+   left:50%;
+   top:25%;
+}
+
+/********************section main**************/
+#boxTwiter>section{
+    display:inline-block;
+    float:left;
+    margin:10px;
+}
+
+#boxTwiter{
+    width:100%;
+    position:absolute;
+    left:50%;
+    margin-left:-630px;  
+}
+
+/**************************section left********************/
+.boxTwiter-left{
+    width:300px;
+    height:250px;
+    background-color:#1da1f2;
+    position:relative;
+}
+
+.boxTwiter-left-profile{
+    width:300px;
+    background-color:#fff;
+    position:absolute;
+    top:50%;
+}
+
+.boxTwiter-left-profile-logo{
+    display:inline-block;
+    border:3px solid #fff;
+    border-radius:50%;
+    background-color:#1da1f2;
+    width:80px;
+    height:80px;
+    position:absolute;
+    bottom:70px;
+    left:10px;
+}
+
+.boxTwiter-left-profile-logo::before{
+    content: "\f083";
+    font-family: FontAwesome;
+    font-size:30px;
+    color:#fff;
+    position:absolute;
+    top: 23px;
+    left:23px;
+}
+
+.boxTwiter-left-profile-info{
+    float:right;
+    width:200px;
+    height:50px;
+}
+
+.boxTwiter-left-profile-info span:first-child{
+    font-weight:bold;
+    padding:10px;
+}
+
+.boxTwiter-left-profile-count-tweet{
+    clear:both;
+    width:300px;
+    height:80px;
+    padding:10px;
+}
+
+.boxTwiter-left-profile-count-tweet span:first-child{
+    color:#6577a4;
+    font-size:12px;
+}
+
+/*********section center***************/
+.boxTwiter-center{
+    width: 600px;
+    background-color:#e8f5fd;
+    text-align: center;
+    padding: 10px;
+    position:relative;
+}
+
+.icono-boxTwiter{
+    display:inline-block;
+    
+}
+
+.icono-boxTwiter::before{
+    content: "\f2bd";
+    font-family: FontAwesome;
+    color:#657786;
+    font-size:30px;
+    position:absolute;
+    top:15px;
+    left:25px;
+}
+
+.input-boxTwiter{
+    border:1px solid #c6e7fb;
+    background-color:#fff;
+    border-radius:10px;
+    font-size:15px;
+    width:500px;
+    margin-left:30px;
+    font-family: inherit;
+}
+
+:-ms-input-placeholder { color: #1da1f2;}
+::-webkit-input-placeholder { color: #1da1f2;} 
+::-moz-placeholder { color: #1da1f2;}
+
+/**************************section left********************/
+.boxTwiter-right{
+    width:300px;
+    height:300px;
+    outline:1px solid black;
+}
+
+/*****************elemento creado button y p*****************/
+
+button{
+    width:70px;
+    heigth:20px;
+    background-color:#4ab3f4;
+    color:#fff;
+    border:0;
+    border-radius:10px;
+    font-size:15px;
+    padding:5px;
+}
+
+p{
+    display:inline-block;
+    margin-left:350px;
+}
+/************************show tweet*********************/
+.show-tweet{
+    width:500px;
+    height:auto;
+    clear:both;
+    background-color:#fff;
+    display:inline-block;
+    text-align:center;
+    margin:5px 0;
+   
+}
+/***********/
+.tweets-messages{
+    width:500px;
+    height:auto;
+
+}
