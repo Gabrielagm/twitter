@@ -10,7 +10,7 @@ body{
 }
 
 #menu-nav{
-    width:100%;
+    //width:100%;
     height:50px;
     border-top:1px solid #acb1b4;
     border-bottom:1px solid #acb1b4;
@@ -99,7 +99,7 @@ nav ul:first-child a:last-child{
 }
 
 #boxTwiter{
-    width:100%;
+    max-width:100%;
     position:absolute;
     left:50%;
     margin-left:-630px;  
@@ -166,6 +166,10 @@ nav ul:first-child a:last-child{
 }
 
 /*********section center***************/
+.boxTwiter-center-content{
+    //height: auto;
+}
+
 .boxTwiter-center{
     width: 600px;
     background-color:#e8f5fd;
@@ -189,7 +193,7 @@ nav ul:first-child a:last-child{
     left:25px;
 }
 
-.input-boxTwiter{
+#input-boxTwitter{
     border:1px solid #c6e7fb;
     background-color:#fff;
     border-radius:10px;
@@ -197,6 +201,10 @@ nav ul:first-child a:last-child{
     width:500px;
     margin-left:30px;
     font-family: inherit;
+}
+
+#input-boxTwitter .open{
+    height:220px;
 }
 
 :-ms-input-placeholder { color: #1da1f2;}
@@ -210,24 +218,8 @@ nav ul:first-child a:last-child{
     outline:1px solid black;
 }
 
-/*****************elemento creado button y p*****************/
 
-button{
-    width:70px;
-    heigth:20px;
-    background-color:#4ab3f4;
-    color:#fff;
-    border:0;
-    border-radius:10px;
-    font-size:15px;
-    padding:5px;
-}
-
-p{
-    display:inline-block;
-    margin-left:350px;
-}
-/************************show tweet*********************/
+/************************show tweet*********************
 .show-tweet{
     width:500px;
     height:auto;
@@ -238,9 +230,9 @@ p{
     margin:5px 0;
    
 }
-/***********/
+/***********
 .tweets-messages{
     width:500px;
     height:auto;
 
-}
+}*/

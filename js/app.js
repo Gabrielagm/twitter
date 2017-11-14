@@ -1,5 +1,98 @@
 
+var inputBoxTwitter = document.getElementById("input-boxTwitter");
+var boxTwiterCenterContent = document.querySelector(".boxTwiter-center-content");
+var boxTwiterCenter = document.querySelector(".boxTwiter-center");
 
+var inputButton = document.createElement("button");
+inputButton.setAttribute("style","width:70px; heigth:20px; background-color:#4ab3f4; color:#fff; border:0; border-radius:10px; font-size:15px; padding:5px");
+inputButton.textContent = "twittear";
+
+var characters = document.createElement("p");
+characters.setAttribute("style","display:inline-block; margin-left:350px; color: black");
+characters.textContent = "140";
+
+
+
+inputBoxTwitter.onclick = function(e){
+
+    inputBoxTwitter.style.height = 110 + "px";
+    boxTwiterCenterContent.appendChild(inputButton);
+    boxTwiterCenterContent.appendChild(characters);
+    inputBoxTwitter.addEventListener("keyup", countCharacters);  
+};
+
+var cont = 140;
+var countCharacters = function(){
+    var conteo = cont - inputBoxTwitter.textLength;
+    characters.textContent = conteo;
+    characters.style.color = "blue";
+    changeColor(conteo, characters, inputButton);
+};
+
+
+
+/*
+var enableButton = function(element){
+    element.style.backgroundColor = "red";
+    //element.disabled = false;
+};
+*/
+
+var changeColor = function(contando, element, element2){
+    if(contando < 20){
+         element.style.color = "green";
+    }
+    if (contando < 10){
+        element.style.color = "yellow";
+    }
+    if (contando < 0){
+        element.style.color = "red";   
+        element2.disabled = true; 
+    }
+
+     
+};
+
+var disabledButton = function(element){
+    element.style.backgroundColor = "pink";
+    //element.disabled = true;
+    
+    
+};
+
+inputButton.onclick = function(){
+    var showTweet = document.createElement("div");
+    showTweet.setAttribute("style", "width:580px; background-color:#fff")
+    showTweet.textContent = inputBoxTwitter.value;
+    boxTwiterCenter.appendChild(showTweet);
+    inputBoxTwitter.value="";
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var inputBoxTwitter= document.querySelector(".input-boxTwiter");
 var boxTwiterCenter = document.querySelector(".boxTwiter-center");
 var buttonInput = document.createElement("button");
@@ -30,7 +123,7 @@ buttonInput.addEventListener("click", function showMessage(){
     inputBoxTwitter.value="";
     
 })
-
+/*
 //en esta parte estoy tratando de implementar los colores al contador
 inputBoxTwitter.addEventListener("keypress", function (e){
    // inputBoxTwitter.value);
@@ -43,3 +136,13 @@ inputBoxTwitter.addEventListener("keypress", function (e){
         cont.style.color = "red";
     } 
 })
+*//*
+inputBoxTwitter.addEventListener("keypress", function(e){
+   
+    console.dir(e.target.value);
+   /* while(e){
+        contador--;
+    }
+    return contador;
+    console.log(contador);
+})*/
