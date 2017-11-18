@@ -166,34 +166,36 @@ nav ul:first-child a:last-child{
 }
 
 /*********section center***************/
-.boxTwiter-center-content{
-    //height: auto;
+#boxtwitter-center-content{
+    height:auto;
 }
 
-.boxTwiter-center{
+.boxtwitter-center{
     width: 600px;
     background-color:#e8f5fd;
-    text-align: center;
-    padding: 10px;
+    //text-align: center;
+    padding-top: 10px;
     position:relative;
+ 
 }
 
-.icono-boxTwiter{
+.icono-boxtwitter{
     display:inline-block;
     
 }
 
-.icono-boxTwiter::before{
+.icono-boxtwitter::before{
     content: "\f2bd";
     font-family: FontAwesome;
-    color:#657786;
+    color:black;
     font-size:30px;
     position:absolute;
     top:15px;
     left:25px;
+    opacity:0.2;
 }
 
-#input-boxTwitter{
+#input-boxtwitter{
     border:1px solid #c6e7fb;
     background-color:#fff;
     border-radius:10px;
@@ -201,10 +203,11 @@ nav ul:first-child a:last-child{
     width:500px;
     margin-left:30px;
     font-family: inherit;
-}
+    margin-left:60px;
+    overflow:hidden;
 
-#input-boxTwitter .open{
-    height:220px;
+    
+   
 }
 
 :-ms-input-placeholder { color: #1da1f2;}
@@ -218,21 +221,47 @@ nav ul:first-child a:last-child{
     outline:1px solid black;
 }
 
+/******estilo botón del input***/
 
-/************************show tweet*********************
-.show-tweet{
-    width:500px;
-    height:auto;
-    clear:both;
-    background-color:#fff;
-    display:inline-block;
-    text-align:center;
-    margin:5px 0;
-   
+.styleButton{
+    width:90px;
+    background-color:#4ab3f4;
+    color:#fff;
+    border:0;
+    border-radius:10px;
+    font-size:15px;
+    font-weight: bold;
+    padding:5px;
+    
 }
-/***********
-.tweets-messages{
-    width:500px;
-    height:auto;
 
-}*/
+/*******estilo a characters******/
+
+.styleCharacters{
+   display:inline-block;
+   float:right;
+   color:blue;
+   font-weight:bold; 
+}
+/************caja para mostrar los tweets*/
+.styleShowTweet{
+    width:100%; 
+    background-color:#fff;
+    height: auto;
+    font-size:15px;
+    font-family: inherit;
+    padding:5px;
+    border:none;
+    overflow:hidden;
+}
+
+.contendTime{
+    display:inline-block;
+    width:580px;
+    outline:1px solid black;
+    color:black;
+}
+
+.boxTwiter-right{
+    background: pink;
+}
