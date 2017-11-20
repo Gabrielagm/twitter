@@ -1,4 +1,3 @@
-
 var boxTwiterCenter = document.querySelector('.boxtwitter-center');
 var boxTwiterCenterContent = document.querySelector('#boxtwitter-center-content');
 var inputBoxTwitter = document.getElementById('input-boxtwitter');
@@ -22,7 +21,9 @@ inputBoxTwitter.addEventListener('click', (event) =>{
 
 var countCharacters = event =>{
   var cont = 140;
+  console.dir(inputBoxTwitter.textLength);
   var count = cont - inputBoxTwitter.textLength;
+  console.dir(inputBoxTwitter.textLength);
   characters.textContent = count;
   characters.style.color = 'blue';
   changeColor(count, characters);
