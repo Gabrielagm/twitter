@@ -213,11 +213,13 @@ nav ul:first-child a:last-child{
 ::-webkit-input-placeholder { color: #1da1f2;} 
 ::-moz-placeholder { color: #1da1f2;}
 
-/**************************section left********************/
+/**************************section right********************/
 .boxTwiter-right{
     width:300px;
     height:300px;
-    outline:1px solid black;
+    background-image:url(../assets/imgs/twitter.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /******estilo botón del input***/
@@ -261,6 +263,3 @@ nav ul:first-child a:last-child{
     color:black;
 }
 
-.boxTwiter-right{
-    background: pink;
-}
