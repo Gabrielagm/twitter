@@ -9,7 +9,6 @@ body{
 }
 
 #menu-nav{
-    //width:100%;
     height:50px;
     border-top:1px solid #acb1b4;
     border-bottom:1px solid #acb1b4;
@@ -22,6 +21,7 @@ nav{
     position:absolute;
     left:5%;
     padding:7px;
+    font-size:14px;
 }
 
 nav>ul{
@@ -41,18 +41,45 @@ nav>ul>a{
 }
 
 .nav-start::before{
-    content: "\f005";
+    content: "\f015";
     font-family: FontAwesome;
+    color:#1da1f2;
+    font-size:23px;
+    margin-right:4px;
+    position:relative;
+    top:2px;
+}
+
+.nav-start{
+    color:#1da1f2;
 }
 
 .nav-notifications:before{
-    content: "\f008";
+    content: "\f0a2";
     font-family: FontAwesome;
+    font-size:19px;
+    font-weight:400;
+    margin-right:4px;
+    position:relative;
+    top:2px;
+}
+
+.nav-notifications:hover{
+    color:#1da1f2;
 }
 
 .nav-messages::before{
-    content:"\f0e0";
+    content: "\f003";
     font-family: FontAwesome;
+    font-size:19px;
+    font-weight:400;
+    margin-right:4px;
+    position:relative;
+    top:2px;
+}
+
+.nav-messages:hover{
+    color:#1da1f2;
 }
 
 .nav-input{
@@ -61,10 +88,18 @@ nav>ul>a{
     background-color:#f5f8fa;
     border:1px solid #e6ecf0;
     border-radius:20px;
+    margin-top:3px;
+    vertical-align:top;
 }
-.nav-photo-user::after{
-    content: "\f2bd";
-    font-family: FontAwesome;
+
+.nav-photo-user{
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background-image:url(../assets/imgs/default_profile_normal.png);
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .nav-button{   
@@ -74,6 +109,8 @@ nav>ul>a{
     color: #fff;
     width:80px;
     padding:8px 10px;
+    display:inline-block;
+    vertical-align:top;   
 }
 
 nav ul:first-child a{
@@ -180,18 +217,15 @@ nav ul:first-child a:last-child{
 
 .icono-boxtwitter{
     display:inline-block;
-    
-}
-
-.icono-boxtwitter::before{
-    content: "\f2bd";
-    font-family: FontAwesome;
-    color:black;
-    font-size:30px;
+    width:30px;
+    height:30px;
+    background-image:url(../assets/imgs/default_profile_normal.png);
+    background-size:cover;
+    background-repeat: no-repeat;
     position:absolute;
     top:15px;
     left:25px;
-    opacity:0.2;
+    
 }
 
 #input-boxtwitter{

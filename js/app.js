@@ -2,6 +2,8 @@ window.addEventListener('load', function(event) {
   var boxTwiterCenter = document.querySelector('.boxtwitter-center');
   var boxTwiterCenterContent = document.querySelector('#boxtwitter-center-content');
   var inputBoxTwitter = document.getElementById('input-boxtwitter');
+  var contentShowTweet = document.createElement('contentShowTweet');
+  boxTwiterCenter.appendChild(contentShowTweet);
 
   var inputButton = document.createElement('button');
   inputButton.classList.add('styleButton');
@@ -9,36 +11,31 @@ window.addEventListener('load', function(event) {
 
   var characters = document.createElement('p');
   characters.classList.add('styleCharacters');
-  characters.textContent = '140';
-
 
   inputBoxTwitter.addEventListener('click', (event) =>{
     inputBoxTwitter.addEventListener('keydown', autosize);
     boxTwiterCenterContent.appendChild(inputButton);
     boxTwiterCenterContent.appendChild(characters);
-    inputBoxTwitter.addEventListener('keydown', countCharacters);
+    inputBoxTwitter.addEventListener('keyup', countCharacters);
     disabledButtonByInput(inputBoxTwitter, inputButton);
   });
 
   var countCharacters = event =>{
     var cont = 140;
-    console.dir(inputBoxTwitter.textLength);
     var count = cont - inputBoxTwitter.textLength;
-    console.dir(inputBoxTwitter.textLength);
+    // var count = cont - event.target.value.trim().length;
+    // console.log(event.target.value.trim().length);
     characters.textContent = count;
     characters.style.color = 'blue';
     changeColor(count, characters);
     disabledButtonByCharacters(characters.style.color, inputButton);
-    disabledButtonByInput(inputBoxTwitter, inputButton);     
+    disabledButtonByInput(inputBoxTwitter, inputButton); 
   };
 
-  var autosize = (event) =>{
-    setTimeout((event) => {
-      inputBoxTwitter.style.height = '70px'; 
-      inputBoxTwitter.style.height = inputBoxTwitter.scrollHeight + 'px';
-    }, 0);
+  var autosize = function() {
+    inputBoxTwitter.style.height = '70px'; 
+    inputBoxTwitter.style.height = inputBoxTwitter.scrollHeight + 'px';
   };
-
 
   var disabledButtonByInput = (element1, element2) => {
     if (element1.textLength === 0) {
@@ -76,10 +73,19 @@ window.addEventListener('load', function(event) {
     var showTweet = document.createElement('textarea');
     showTweet.classList.add('styleShowTweet');
     showTweet.textContent = inputBoxTwitter.value;
-    boxTwiterCenter.appendChild(showTweet);
+    contentShowTweet.insertBefore(showTweet, contentShowTweet.firstElementChild);
     inputBoxTwitter.style.height = 50 + 'px';
     inputBoxTwitter.value = '';
     characters.textContent = '140';
     characters.style.color = 'blue'; 
   });
 });
+
+ /* ya no era necesario colocar setTiemout
+  var autosize = (event) =>{
+    setTimeout((event) => {
+      inputBoxTwitter.style.height = '70px'; 
+      inputBoxTwitter.style.height = inputBoxTwitter.scrollHeight + 'px';
+    }, 0);
+  };*/
+
